@@ -1,0 +1,8 @@
+silentcast:
+  image: silentcast
+  environment:
+    DISPLAY: unix${DISPLAY}
+  volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
+    - $HOME/.Xauthority:/home/silentcast/.Xauthority
+  command: /home/silentcast/silentcast-2.2/silentcast
